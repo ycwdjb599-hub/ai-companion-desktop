@@ -30,7 +30,7 @@ https://github.com/Human3DAIGC/GlobalDiff
 Python dependencies are acquired from their original PyPI/PyTorch publishers.
 Original wheel metadata, licenses and NOTICE files are retained during install.
 https://pypi.org/
-https://mirror.sjtu.edu.cn/docs/pytorch-wheels
+https://pytorch.org/get-started/locally/
 
 
 
