@@ -2,7 +2,7 @@
 
 <h1 align="center">AI伴侶</h1>
 <p align="center"><strong>讓她坐在你的桌面上，聊聊今天。</strong><br>Windows 10 / 11 · 64 位元 · 免費預覽版 · 自備 API Key</p>
-<p align="center">[简体中文](../../README.md) · [繁體中文](../../docs/i18n/README.zh-TW.md) · [English](../../docs/i18n/README.en.md) · [日本語](../../docs/i18n/README.ja.md)</p>
+<p align="center"><a href="../../README.md">简体中文</a> · <a href="../../docs/i18n/README.zh-TW.md">繁體中文</a> · <a href="../../docs/i18n/README.en.md">English</a> · <a href="../../docs/i18n/README.ja.md">日本語</a></p>
 
 <p align="center"><a href="https://github.com/ycwdjb599-hub/ai-companion-desktop/releases/latest/download/AICompanionTrial-win-Setup.exe"><strong>↓ 下載 Windows 安裝程式</strong></a> · <a href="https://github.com/ycwdjb599-hub/ai-companion-desktop/releases/latest">版本與更新說明</a> · <a href="https://github.com/ycwdjb599-hub/ai-companion-desktop/issues/new/choose">回報問題</a></p>
 
@@ -32,7 +32,7 @@
 - 建議 NVIDIA 獨立顯示卡、16–32 GB 記憶體。8 GB 顯示記憶體是尚待全面驗證的目標；雲端語音和停用重型動作可降低負載。
 - 軟體免費，外部 API 由供應商向你計費。必要上下文會傳送給所選服務；資料庫留在本機，Key 以目前 Windows 使用者加密儲存。
 - **此倉庫文件提供四種語言；Windows 介面目前為簡體中文。** 對話及配音語言支援取決於服務。
-- 部分中國大陸網路可能無法連線 GitHub。動作也需原作者 GitHub 與清華、上海交大鏡像，不能保證所有網路都不需 VPN。下載支援續傳與校驗。
+- 本版本以可連線外網的環境為前提。程式資源由 GitHub 提供，動作依賴使用官方來源；支援續傳與校驗。
 - 目前是未具商業程式碼簽章的預覽版。僅從本倉庫 Releases 下載；系統攔截時先檢查來源，不必關閉防護。
 
 公開下載與回報入口；不包含私人研發資料或使用者聊天紀錄。

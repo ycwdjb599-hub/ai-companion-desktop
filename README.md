@@ -2,7 +2,7 @@
 
 <h1 align="center">AI伴侣</h1>
 <p align="center"><strong>让她坐在你的桌面上，和你说说今天。</strong><br>Windows 10 / 11 · 64 位 · 免费预览版 · 自备 API Key</p>
-<p align="center">[简体中文](README.md) · [繁體中文](docs/i18n/README.zh-TW.md) · [English](docs/i18n/README.en.md) · [日本語](docs/i18n/README.ja.md)</p>
+<p align="center"><a href="README.md">简体中文</a> · <a href="docs/i18n/README.zh-TW.md">繁體中文</a> · <a href="docs/i18n/README.en.md">English</a> · <a href="docs/i18n/README.ja.md">日本語</a></p>
 
 <p align="center"><a href="https://github.com/ycwdjb599-hub/ai-companion-desktop/releases/latest/download/AICompanionTrial-win-Setup.exe"><strong>↓ 下载 Windows 安装程序</strong></a> · <a href="https://github.com/ycwdjb599-hub/ai-companion-desktop/releases/latest">查看版本与更新说明</a> · <a href="https://github.com/ycwdjb599-hub/ai-companion-desktop/issues/new/choose">反馈问题</a></p>
 
@@ -32,7 +32,7 @@
 - 建议 NVIDIA 独显、16–32 GB 内存；8 GB 显存是目标配置，尚未完成所有设备验证。关闭重型动作或使用云端声音可减轻负担。
 - 软件免费，API 调用由你所选服务计费。聊天所需上下文会发送给该服务；聊天数据库保留本地，Key 按当前 Windows 用户加密保存。
 - **本仓库文档有四种语言，当前 Windows 界面为中文。** 不同语言的对话和配音支持取决于所选服务。
-- GitHub 在部分中国大陆网络可能较慢或不可达。不能保证所有网络无 VPN 可用。动作还会访问原作者 GitHub，以及清华、上海交大镜像；安装程序有续传和校验。
+- 本版本按能访问外网的环境设计。程序资源通过 GitHub 分发，动作依赖使用官方来源；安装程序有续传和校验。
 - 当前为预览版，安装程序尚无商业代码签名。只从此仓库的 Releases 获取安装文件。系统拦截时先检查来源；不需要关闭系统防护。
 
 这是公开下载与反馈仓库，不包含私人研发资料或用户聊天记录。

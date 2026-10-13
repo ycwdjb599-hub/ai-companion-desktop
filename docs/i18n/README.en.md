@@ -2,7 +2,7 @@
 
 <h1 align="center">AI Companion</h1>
 <p align="center"><strong>A little company on your Windows desktop.</strong><br>Windows 10 / 11 · x64 · Free preview · Bring your own API key</p>
-<p align="center">[简体中文](../../README.md) · [繁體中文](../../docs/i18n/README.zh-TW.md) · [English](../../docs/i18n/README.en.md) · [日本語](../../docs/i18n/README.ja.md)</p>
+<p align="center"><a href="../../README.md">简体中文</a> · <a href="../../docs/i18n/README.zh-TW.md">繁體中文</a> · <a href="../../docs/i18n/README.en.md">English</a> · <a href="../../docs/i18n/README.ja.md">日本語</a></p>
 
 <p align="center"><a href="https://github.com/ycwdjb599-hub/ai-companion-desktop/releases/latest/download/AICompanionTrial-win-Setup.exe"><strong>↓ Download for Windows</strong></a> · <a href="https://github.com/ycwdjb599-hub/ai-companion-desktop/releases/latest">Releases and changelog</a> · <a href="https://github.com/ycwdjb599-hub/ai-companion-desktop/issues/new/choose">Report a problem</a></p>
 
@@ -32,7 +32,7 @@ A desktop companion you can talk to. Text, voice and an animated character share
 - An NVIDIA GPU and 16–32 GB RAM are recommended. 8 GB VRAM is a target, not a fully verified minimum. Cloud voice and disabling heavier motion reduce local load.
 - The app is free; your chosen API provider bills usage. Necessary conversation context is sent to that provider. The database stays local and keys are encrypted for the current Windows user.
 - **These docs support four languages; the Windows UI is currently Simplified Chinese.** Conversation and voice language support depends on the selected provider.
-- GitHub may be slow or blocked on some mainland China networks. Motion also uses the original creator’s GitHub and Tsinghua/SJTUG mirrors. Availability without a VPN is not guaranteed everywhere. Downloads support resuming and integrity checks.
+- This distribution assumes access to the external internet. App resources use GitHub, while motion dependencies use their official publisher sources. Downloads support resuming and integrity checks.
 - This is a preview without a commercial code-signing certificate. Get installers only from this repository’s Releases. Check the source if Windows blocks a file; do not disable system protection.
 
 A public home for downloads and feedback. Private development material and user conversations are not published here.

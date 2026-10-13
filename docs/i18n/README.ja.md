@@ -2,7 +2,7 @@
 
 <h1 align="center">AI Companion</h1>
 <p align="center"><strong>Windows のデスクトップに、小さな話し相手を。</strong><br>Windows 10 / 11 · x64 · 無料プレビュー · 自分の API キーを使用</p>
-<p align="center">[简体中文](../../README.md) · [繁體中文](../../docs/i18n/README.zh-TW.md) · [English](../../docs/i18n/README.en.md) · [日本語](../../docs/i18n/README.ja.md)</p>
+<p align="center"><a href="../../README.md">简体中文</a> · <a href="../../docs/i18n/README.zh-TW.md">繁體中文</a> · <a href="../../docs/i18n/README.en.md">English</a> · <a href="../../docs/i18n/README.ja.md">日本語</a></p>
 
 <p align="center"><a href="https://github.com/ycwdjb599-hub/ai-companion-desktop/releases/latest/download/AICompanionTrial-win-Setup.exe"><strong>↓ Windows 版をダウンロード</strong></a> · <a href="https://github.com/ycwdjb599-hub/ai-companion-desktop/releases/latest">リリースと更新内容</a> · <a href="https://github.com/ycwdjb599-hub/ai-companion-desktop/issues/new/choose">不具合を報告</a></p>
 
@@ -32,7 +32,7 @@
 - NVIDIA GPU と 16–32 GB の RAM を推奨。VRAM 8 GB は検証中の目標であり、動作保証済みの最低要件ではありません。クラウド音声や重いモーションの無効化で負荷を軽減できます。
 - アプリは無料ですが API 利用料は選んだサービスから請求されます。必要な会話コンテキストはそのサービスに送信されます。DB は PC に保存され、キーは現在の Windows ユーザー向けに暗号化されます。
 - **このリポジトリの文書は4言語対応です。Windows UI は現在、簡体字中国語です。** 会話・音声の対応言語はサービスによって異なります。
-- 中国本土の一部ネットワークでは GitHub に接続できないことがあります。モーションは作者の GitHub と清華・上海交通大学ミラーも使用します。どの地域でも VPN なしで利用できるとは限りません。再開可能なダウンロードと整合性確認を備えています。
+- この配布版は外部インターネットに接続できる環境を前提とします。アプリのリソースは GitHub、モーションの依存パッケージは公式配布元を利用します。ダウンロードの再開と整合性確認に対応しています。
 - 商用コード署名のないプレビュー版です。このリポジトリの Releases から取得し、Windows にブロックされたら入手先を確認してください。システム保護を無効にする必要はありません。
 
 ダウンロードとフィードバック用の公開リポジトリです。非公開の開発資料やユーザーの会話は含みません。

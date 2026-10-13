@@ -14,9 +14,9 @@
 ## 下载失败
 
 - 网络中断后重新准备会续传已有进度。基础资源的分块由程序处理；不要自己改名或拼接。
-- 新渠道使用 GitHub，不再依赖原来停用的北京 OSS。动作的 PyTorch/Python 依赖继续使用已冻结的清华、上海交大镜像。
+- 新渠道使用 GitHub，不再依赖原来停用的北京 OSS。动作的 Python/PyTorch 依赖使用已冻结版本的官方来源。
 - 原作者的待机动画从其官方 GitHub 下载，不镜像受限动画。它和基础资源、说话动作的下载状态独立。
-- GitHub 在部分中国大陆网络可能不可达。若网页或资源链接打不开，请稍后换可用网络；本版本没有承诺所有网络免 VPN 可用。
+- 本版本按能够访问 GitHub 和外网服务的环境设计，不另提供国内镜像。
 - 新版显示资源准备失败时，不需要先删除旧资源。保留相同保存位置，校验通过的资源会复用。
 
 ## 已安装旧版
@@ -33,7 +33,7 @@
 
 Download and run **AICompanionTrial-win-Setup.exe** from Releases. The repository ZIP is documentation, not an installer. On first launch, select a resource drive and start preparation. The app downloads and verifies its own resource parts; no manual joining is required. Follow the [English illustrated API guide](SETUP.en.md), then start the companion.
 
-Animation preparation is independent from core chat. Once core resources and your API are ready, you can start and finish missing animations later. Optional motion uses GitHub and pinned Tsinghua/SJTUG mirrors; connectivity depends on your network.
+Animation preparation is independent from core chat. Once core resources and your API are ready, you can start and finish missing animations later. Optional motion uses GitHub and pinned official dependency sources. This distribution assumes access to the external internet.
 
 To update, exit the app and run the new installer while retaining the existing data/resource locations. API settings, history and memory stay local. The unchanged base component version is reused when already installed. To uninstall, use the app’s uninstall action or Windows Apps settings; personal data and downloaded resources are retained.
 

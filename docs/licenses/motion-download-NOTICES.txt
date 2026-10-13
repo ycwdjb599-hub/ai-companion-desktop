@@ -27,9 +27,9 @@ GlobalDiff: Alibaba Cloud / Human3DAIGC; Apache-2.0 as declared in the
 publisher's README. SimpleSpeechModel checkpoint archive is unmodified.
 https://github.com/Human3DAIGC/GlobalDiff
 
-Python dependencies are acquired from Tsinghua/SJTUG publisher mirrors.
+Python dependencies are acquired from their original PyPI/PyTorch publishers.
 Original wheel metadata, licenses and NOTICE files are retained during install.
-https://mirrors.tuna.tsinghua.edu.cn/help/pypi/
+https://pypi.org/
 https://mirror.sjtu.edu.cn/docs/pytorch-wheels
 
 
