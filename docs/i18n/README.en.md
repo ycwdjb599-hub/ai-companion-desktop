@@ -1,42 +1,137 @@
-<p align="center"><img src="../../assets/hero-image.png" alt="AI Companion" width="100%"></p>
-
 <h1 align="center">AI Companion</h1>
-<p align="center"><strong>A little company on your Windows desktop.</strong><br>Windows 10 / 11 · x64 · Free preview · Bring your own API key</p>
+<p align="center"><strong>A little company, right on your desktop.</strong></p>
 <p align="center"><a href="../../README.md">简体中文</a> · <a href="../../docs/i18n/README.zh-TW.md">繁體中文</a> · <a href="../../docs/i18n/README.en.md">English</a> · <a href="../../docs/i18n/README.ja.md">日本語</a></p>
+<p align="center"><a href="https://github.com/ycwdjb599-hub/ai-companion-desktop/releases/latest"><img src="https://img.shields.io/github/v/release/ycwdjb599-hub/ai-companion-desktop?style=flat-square&amp;color=6379df" alt="Latest release"></a> <img src="https://img.shields.io/badge/Windows-10%20%2F%2011-6379df?style=flat-square" alt="Windows 10 / 11"> <img src="https://img.shields.io/badge/Free-Preview-a086c5?style=flat-square" alt="Free preview"> <img src="https://img.shields.io/badge/API-Bring%20your%20own-74818d?style=flat-square" alt="Bring your own API key"></p>
 
-<p align="center"><a href="https://github.com/ycwdjb599-hub/ai-companion-desktop/releases/latest/download/AICompanionTrial-win-Setup.exe"><strong>↓ Download for Windows</strong></a> · <a href="https://github.com/ycwdjb599-hub/ai-companion-desktop/releases/latest">Releases and changelog</a> · <a href="https://github.com/ycwdjb599-hub/ai-companion-desktop/issues/new/choose">Report a problem</a></p>
+<p align="center"><a href="https://github.com/ycwdjb599-hub/ai-companion-desktop/releases/latest/download/AICompanionTrial-win-Setup.exe"><img src="../../assets/download-windows.svg" alt="Download the Windows installer" width="272"></a><br><a href="../../docs/SETUP.en.md">Illustrated setup guide</a> · <a href="https://github.com/ycwdjb599-hub/ai-companion-desktop/releases/latest">Releases</a> · <a href="https://github.com/ycwdjb599-hub/ai-companion-desktop/issues/new/choose">Report a problem</a></p>
 
-A desktop companion you can talk to. Text, voice and an animated character share one experience, while your chat history and memory stay on your computer.
+<p align="center"><img src="../../assets/hero-image.png" alt="AI Companion illustration" width="860"></p>
+<p align="center"><a href="#companion">Meet your companion</a> · <a href="#technology">Technology</a> · <a href="#start">Quick start</a> · <a href="#requirements">Requirements</a></p>
+
+A companion that lives on your Windows desktop. Talk about your day through text or voice, with chat history and memory stored on your own computer.
+
+<a name="companion"></a>
+
+## Company that stays on your desktop
+
+<table>
+<tr>
+<td align="center" width="36%"><a href="../../assets/model02-desktop.png"><img src="../../assets/model02-desktop.png" alt="Model 2 renderer screenshot" width="240"></a><br><sub>Model 2 · Current default avatar</sub></td>
+<td width="64%">
+<p><strong>Desktop presence</strong><br>Dragging, taskbar and window-edge sitting, idle animations and expressions.</p>
+<p><strong>Text and voice</strong><br>Text chat, push-to-talk and continuous listening; interrupt a reply with a button.</p>
+<p><strong>Local continuity</strong><br>Chat history and memory on your PC, with a history viewer to revisit conversations.</p>
+<p><strong>Your preferences</strong><br>Draggable captions, scrolling or sentence mode, fonts, colors, size, FPS and rendering quality.</p>
+</td>
+</tr>
+</table>
+
+<a name="technology"></a>
+
+## Built with
+
+Cloud services handle conversation and speech synthesis; your PC handles recognition, avatar presentation and data storage. Motion is prepared separately, so a failed motion download does not block basic chat.
+
+| Module | Current technology | Role |
+| --- | --- | --- |
+| Desktop Host | **C# · .NET 10 · WinForms** | Windows interface and conversation orchestration |
+| Avatar | **Unity · UniVRM** | Transparent desktop avatar, VRM, expressions and animation |
+| Conversation | **Qwen Character API** | Recommended conversation service using your own API key |
+| Speech recognition | **SenseVoiceSmall INT8 · sherpa-onnx · Silero VAD** | Local speech recognition and voice activity detection |
+| Speech synthesis | **Qwen TTS API** | Cloud speech synthesis; local voice models are optional |
+| Memory | **SQLite · Qwen3 Embedding 0.6B** | Chat/state storage and local semantic history retrieval |
+| Speech motion | **StreamTalk · WavLM · Fixed Body** | Optional audio-driven motion and avatar rig adaptation |
+| Distribution | **Velopack · GitHub Releases · SHA-256** | Installation, resumable resources, integrity checks and version distribution |
+
+<details>
+<summary>How input, conversation, memory and motion connect</summary>
+
+```mermaid
+flowchart LR
+  Text["Text input"]
+  Mic["Microphone"]
+  ASR["Local recognition"]
+  Core["Conversation and context"]
+  DB["Chat and memory"]
+  LLM["Cloud conversation"]
+  TTS["Cloud speech"]
+  Motion["Optional speech motion"]
+  Avatar["Desktop avatar and captions"]
+  Text --> Core
+  Mic --> ASR --> Core
+  Core <--> DB
+  Core <--> LLM
+  Core --> TTS
+  Core --> Avatar
+  TTS --> Motion --> Avatar
+```
+
+</details>
+
+<a name="start"></a>
 
 ## Three steps to your first conversation
 
-1. Download and run **AICompanionTrial-win-Setup.exe**. Choose an installation location.
-2. On first launch, choose a resource drive and click **准备并继续** (Prepare and continue). Resources download automatically. Follow the illustrated guide to enter your **Qwen Character API key and Workspace ID**, then click **检查并继续** (Check and continue).
-3. Click **开始陪伴** (Start). Right-click the character for settings. Hold **Right Ctrl** to speak, use **Ctrl + Alt + V** for continuous voice, and **Esc** to stop playback. Shortcuts are configurable.
+1. **Install** — Download and run the Windows installer above. No manual Unity Editor, Python or Conda setup is required.
+2. **Connect** — Choose a resource drive and click 准备并继续 (Prepare and continue). Resources download automatically. Follow the illustrated guide to enter your Qwen Character key and Workspace ID, then click 检查并继续 (Check and continue).
+3. **Start** — Click 开始陪伴 (Start). Right-click the character for settings; explore appearance and voice options whenever you like.
 
-[Illustrated Qwen setup](../../docs/SETUP.en.md) · [Install, update and troubleshoot](../../docs/INSTALL.md)
+[Illustrated setup guide](../../docs/SETUP.en.md)
 
-## Make yourself at home
+| Action | Default |
+| --- | --- |
+| Open settings | Right-click the character |
+| Push-to-talk | Right Ctrl |
+| Toggle continuous voice | Ctrl + Alt + V |
+| Stop playback | Esc |
 
-- **Desktop presence**: move the character to a taskbar or window edge. Closing settings keeps your companion running.
-- **Text and voice**: push-to-talk, continuous listening and a button to interrupt playback. Qwen Character and cloud voice are recommended; local TTS weights are not required.
-- **Local continuity**: chat history and memory stay on your PC, with a conversation-history viewer.
-- **Your own preferences**: draggable captions with scrolling or sentence mode; adjustable fonts, colors, character size, FPS, rendering quality and animation switches.
+Shortcuts can be changed in settings.
 
-<p align="center"><img src="../../assets/model02-desktop.png" alt="Desktop character" width="360"></p>
+<a name="requirements"></a>
 
-## Before you download
+## Before you start
 
-- The installer contains the app and smaller resources. The initial base download is approximately **2.1 GiB**. Full speech motion adds approximately **4.7 GiB** plus extraction space. Keep **25 GB** free on the resource drive for the full setup.
-- Animation modules are optional and prepared separately. Once core chat, memory and your API are ready, use the option to start now and complete animations later.
-- An NVIDIA GPU and 16–32 GB RAM are recommended. 8 GB VRAM is a target, not a fully verified minimum. Cloud voice and disabling heavier motion reduce local load.
-- The app is free; your chosen API provider bills usage. Necessary conversation context is sent to that provider. The database stays local and keys are encrypted for the current Windows user.
-- **These docs support four languages; the Windows UI is currently Simplified Chinese.** Conversation and voice language support depends on the selected provider.
-- This distribution assumes access to the external internet. App resources use GitHub, while motion dependencies use their official publisher sources. Downloads support resuming and integrity checks.
-- This is a preview without a commercial code-signing certificate. Get installers only from this repository’s Releases. Check the source if Windows blocks a file; do not disable system protection.
+| Item | Requirement |
+| --- | --- |
+| System | Windows 10 / 11, x64. The app UI is currently Simplified Chinese. |
+| Connection | Your own API key and access to GitHub and your selected provider. The app is free; API usage is billed by the provider. |
+| Storage | About 2.1 GiB for base resources, plus approximately 4.7 GiB for full speech motion. Keep 25 GB free for the full setup. |
+| Local motion | NVIDIA GPU and 16–32 GB RAM recommended. 8 GB VRAM is a validation target, not a guaranteed minimum. |
 
-A public home for downloads and feedback. Private development material and user conversations are not published here.
+## Downloads, updates and privacy
 
-[Third-party notices](../../docs/THIRD_PARTY.md) · [Privacy](../../docs/PRIVACY.md)
+<details>
+<summary>Can I start if motion preparation fails?</summary>
 
-Inspired by [Project AIRI](https://github.com/moeru-ai/airi) and [Mate Engine](https://github.com/shinyflvre/Mate-Engine). Original illustration and a real Model 2 renderer screenshot; third-party assets retain their own permissions.
+Once core chat, memory and your API are ready, choose 先开始使用 · 动作稍后补齐 (Start now; finish motion later). Idle and speech motion are prepared independently and can be completed later.
+
+</details>
+
+<details>
+<summary>How do I update an existing installation?</summary>
+
+Exit the old version and run the new installer, retaining the same data and resource locations. Releases is the online version source. The app supports local update packages; GitHub automatic updates are not connected yet.
+
+</details>
+
+<details>
+<summary>Where are my chats and keys stored?</summary>
+
+Chat and memory stay local. Keys use Windows DPAPI encryption for the current user. Cloud APIs receive the text and context needed to provide the requested service.
+
+</details>
+
+<details>
+<summary>What if Windows blocks the installer?</summary>
+
+The preview installer has no commercial code-signing certificate. Check this repository’s Releases and SHA256SUMS.txt; do not disable system protection.
+
+</details>
+
+[Install, update and uninstall](../../docs/INSTALL.md) · [Privacy](../../docs/PRIVACY.md) · [Third-party notices](../../docs/THIRD_PARTY.md)
+
+---
+
+This is the public download, documentation and feedback repository. Development source remains private.
+
+Presentation references：[Project AIRI](https://github.com/moeru-ai/airi) · [Open-LLM-VTuber](https://github.com/Open-LLM-VTuber/Open-LLM-VTuber) · [Mate Engine](https://github.com/shinyflvre/Mate-Engine)。
