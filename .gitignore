@@ -1,0 +1,12 @@
+*.exe
+*.nupkg
+*.zip
+*.bin
+*.part
+*.001
+*.002
+*.db
+*.sqlite*
+.env
+build/
+uploads/

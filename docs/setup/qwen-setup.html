@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<title>8 步连接千问 · AI伴侣</title>
+<style>
+:root{color-scheme:light;--ink:#263954;--muted:#66758c;--blue:#426bae;--line:#dce5f3}*{box-sizing:border-box}
+html{scroll-behavior:smooth}body{margin:0;background:#f5f8ff;color:var(--ink);font:17px/1.8 "Microsoft YaHei UI","Microsoft YaHei",sans-serif}
+main{max-width:1080px;margin:auto;padding:44px 26px 64px}h1{font-size:38px;line-height:1.35;margin:10px 0 18px}h2{font-size:25px;line-height:1.4;margin:0}p{margin:14px 0}.eyebrow{color:var(--blue);font-size:13px;letter-spacing:2px}.muted{color:var(--muted)}
+nav{display:flex;flex-wrap:wrap;gap:9px;margin:22px 0 32px}nav a{padding:5px 13px;border:1px solid var(--line);border-radius:99px;background:#fff;font-size:14px;text-decoration:none}
+a{color:#295d9f;text-underline-offset:4px}.button{display:inline-block;background:var(--blue);color:#fff;border-radius:12px;padding:10px 18px;text-decoration:none;font-weight:600;margin:8px 0}.secondary{background:#edf2fc;color:#355f9f}
+.step{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;margin:22px 0;scroll-margin-top:20px;box-shadow:0 6px 24px #5274ab08}
+.heading{display:flex;align-items:center;gap:14px}.number{display:grid;place-items:center;min-width:46px;height:46px;border-radius:50%;background:#ec222b;color:#fff;font-size:26px;font-weight:700}
+figure{margin:22px 0 10px}figure a{display:block;border:1px solid #e3e8f0;border-radius:12px;overflow:hidden;background:#f9fbfe}figure img{display:block;width:100%;height:auto}
+.tip{border-left:3px solid #a8bde1;padding:4px 0 4px 14px;font-size:15px;color:#51617a}.next{display:flex;justify-content:flex-end;margin-top:16px;font-size:15px}
+kbd{border:1px solid #ccd7e5;border-radius:4px;background:#f5f7fc;padding:2px 7px;font:inherit;font-size:15px}
+details{border-top:1px solid var(--line);padding:15px 0}summary{font-weight:600;cursor:pointer}.foot{font-size:13px;color:var(--muted);margin-top:28px}
+a:focus-visible,summary:focus-visible{outline:3px solid #759de0;outline-offset:4px}
+@media(max-width:650px){main{padding:25px 14px 44px}h1{font-size:29px}h2{font-size:20px}.step{padding:18px 15px}.heading{gap:10px}.number{min-width:37px;height:37px;font-size:22px}body{font-size:16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style></head><body><main>
+<header><div class="eyebrow">AI伴侣 / 首次配置</div><h1>照着箭头，一步一步来。</h1>
+<p>推荐 <b>千问 Character</b>。你只需要复制两个值：<b>API Key</b> 和 <b>业务空间 ID</b>。<br>默认业务空间就可以，登录和配置都由你亲自完成。</p>
+<p class="muted">按真实截图整理为 8 步，红箭头指向当前操作。截图中的个人信息已用不透明色块涂掉；点击图片可以放大。</p></header>
+<nav aria-label="步骤导航"><a href="#step-1">1 登录</a><a href="#step-2">2 创建</a><a href="#step-3">3 确认</a><a href="#step-4">4 复制 Key</a><a href="#step-5">5 粘贴 Key</a><a href="#step-6">6 复制空间 ID</a><a href="#step-7">7 粘贴空间 ID</a><a href="#step-8">8 检查并继续</a></nav>
+<section class="step" id="step-1">
+<div class="heading"><span class="number" aria-hidden="true">1</span><h2>登录百炼</h2></div>
+<p>在官网右上角确认 <b>华北2（北京）</b>，再点击「立即登录」。使用你自己的阿里云账号。</p>
+<figure><a href="qwen-guide/step-01-login.png" target="_blank" rel="noopener" aria-label="放大第 1 步真实操作截图"><img src="qwen-guide/step-01-login.png" width="1600" height="621" alt="1 · 登录百炼；红色箭头指出操作位置"></a></figure>
+<a class="button" href="https://bailian.console.aliyun.com/cn-beijing/model/settings/api-key">打开百炼 API Key 页面 ↗</a>
+<div class="next"><a href="#step-2">我已完成，看第 2 步 →</a></div>
+</section>
+<section class="step" id="step-2">
+<div class="heading"><span class="number" aria-hidden="true">2</span><h2>点击「创建 API Key」</h2></div>
+<p>登录后，在 API Key 页面点击「创建 API Key」。<b>默认业务空间可以直接用，不需要新建或改成其它空间。</b></p>
+<figure><a href="qwen-guide/step-02-create.png" target="_blank" rel="noopener" aria-label="放大第 2 步真实操作截图"><img src="qwen-guide/step-02-create.png" width="1600" height="498" alt="2 · 点击创建 API Key；红色箭头指出操作位置" loading="lazy"></a></figure>
+
+<div class="next"><a href="#step-3">我已完成，看第 3 步 →</a></div>
+</section>
+<section class="step" id="step-3">
+<div class="heading"><span class="number" aria-hidden="true">3</span><h2>填描述，然后点「确定」</h2></div>
+<p>描述可以填「AI伴侣」，方便你以后认出这个 Key。归属空间保持默认即可；其调用权限需要包含千问 Character。确认后创建。</p>
+<figure><a href="qwen-guide/step-03-confirm.png" target="_blank" rel="noopener" aria-label="放大第 3 步真实操作截图"><img src="qwen-guide/step-03-confirm.png" width="708" height="600" alt="3 · 默认空间，填写描述并确认；红色箭头指出操作位置" loading="lazy"></a></figure>
+
+<div class="next"><a href="#step-4">我已完成，看第 4 步 →</a></div>
+</section>
+<section class="step" id="step-4">
+<div class="heading"><span class="number" aria-hidden="true">4</span><h2>复制 API Key</h2></div>
+<p>在创建成功的窗口中，点击 <b>API Key 旁的「复制」</b>。先不要把这个窗口关掉。</p>
+<figure><a href="qwen-guide/step-04-copy-key.png" target="_blank" rel="noopener" aria-label="放大第 4 步真实操作截图"><img src="qwen-guide/step-04-copy-key.png" width="755" height="667" alt="4 · 复制刚生成的 API Key；红色箭头指出操作位置" loading="lazy"></a></figure>
+<p class="tip">新 Key 可能只展示这一次。请妥善保管，不要把 Key 发到聊天、截图或公开页面。</p>
+<div class="next"><a href="#step-5">我已完成，看第 5 步 →</a></div>
+</section>
+<section class="step" id="step-5">
+<div class="heading"><span class="number" aria-hidden="true">5</span><h2>回到 AI伴侣，粘贴 Key</h2></div>
+<p>切回 <b>AI伴侣 · 连接你的聊天模型</b>。点击「API Key」输入框，按 <kbd>Ctrl</kbd> + <kbd>V</kbd>。输入会显示为圆点，这是正常的。</p>
+<figure><a href="qwen-guide/step-05-paste-key.png" target="_blank" rel="noopener" aria-label="放大第 5 步真实操作截图"><img src="qwen-guide/step-05-paste-key.png" width="795" height="693" alt="5 · 回到 AI伴侣，粘贴到 API Key；红色箭头指出操作位置" loading="lazy"></a></figure>
+<p class="muted">先留着这个窗口，下一步去复制业务空间 ID。</p>
+<div class="next"><a href="#step-6">我已完成，看第 6 步 →</a></div>
+</section>
+<section class="step" id="step-6">
+<div class="heading"><span class="number" aria-hidden="true">6</span><h2>回到百炼，复制业务空间 ID</h2></div>
+<p>回到百炼，点击顶部的 <b>「默认业务空间」</b>，在展开列表中查看当前空间信息。找到 <b>「业务空间 ID」</b> 这一行，点击右侧的小复制图标。</p>
+<figure><a href="qwen-guide/step-06-copy-workspace.png" target="_blank" rel="noopener" aria-label="放大第 6 步真实操作截图"><img src="qwen-guide/step-06-copy-workspace.png" width="1600" height="618" alt="6 · 回百炼复制业务空间 ID；红色箭头指出操作位置" loading="lazy"></a></figure>
+<p class="tip">复制 ID，不要复制下面那行 API Host。保持刚才创建 Key 时所用的空间即可；不需要点击「创建业务空间」。</p><a class="button secondary" href="https://help.aliyun.com/zh/model-studio/obtain-the-app-id-and-workspace-id">找不到空间信息？看官方图示 ↗</a>
+<div class="next"><a href="#step-7">我已完成，看第 7 步 →</a></div>
+</section>
+<section class="step" id="step-7">
+<div class="heading"><span class="number" aria-hidden="true">7</span><h2>回到 AI伴侣，粘贴空间 ID</h2></div>
+<p>点击 AI伴侣的 <b>「业务空间 ID」</b> 输入框，按 <kbd>Ctrl</kbd> + <kbd>V</kbd>。服务地址和模型名由程序填写，不需要你改。</p>
+<figure><a href="qwen-guide/step-07-paste-workspace.png" target="_blank" rel="noopener" aria-label="放大第 7 步真实操作截图"><img src="qwen-guide/step-07-paste-workspace.png" width="795" height="693" alt="7 · 将空间 ID 粘贴到对应输入框；红色箭头指出操作位置" loading="lazy"></a></figure>
+<p class="tip"><b>只需要首次填写。</b>默认空间也有自己的 ID；保存后下次会自动读取。程序不会凭 API Key 猜测空间 ID。</p>
+<div class="next"><a href="#step-8">我已完成，看第 8 步 →</a></div>
+</section>
+<section class="step" id="step-8">
+<div class="heading"><span class="number" aria-hidden="true">8</span><h2>点击「检查并继续」</h2></div>
+<p>确认两个值填写好后，点击右下角的 <b>「检查并继续」</b>。成功后自动加密保存，进入下一步；首次安装可能还需要准备本地组件。</p>
+<figure><a href="qwen-guide/step-08-continue.png" target="_blank" rel="noopener" aria-label="放大第 8 步真实操作截图"><img src="qwen-guide/step-08-continue.png" width="767" height="133" alt="8 · 点击检查并继续；红色箭头指出操作位置" loading="lazy"></a></figure>
+<p class="tip">检查会发送一句匿名短文本，计入你的 API 用量；不使用人物资料或聊天记录。失败时按窗口提示检查，不会自动更换模型。</p>
+<p><b>配置完成。</b>下一次启动会记住你的选择；声音、字幕和外观以后再慢慢探索。</p>
+</section>
+<section class="step"><h2>遇到问题时再看这里</h2>
+<details><summary>业务空间 ID 能自动填写吗？</summary><p>当前首次配置需要你提供空间 ID，不能只凭 Key 自动推断。默认业务空间无需更换，复制它的真实 ID 即可。保存一次后，之后启动会自动读取。</p><a href="https://help.aliyun.com/zh/model-studio/obtain-the-app-id-and-workspace-id">官方获取方式 ↗</a></details>
+<details><summary>官网页面和图片不一样</summary><p>这些是真实操作截图，但官网页面之后可能更新。在官网查找「API Key」「业务空间信息 / 详情」「Workspace ID」；优先使用官方最新指引。程序不代你登录、创建 Key 或充值。</p><a href="https://help.aliyun.com/zh/model-studio/get-api-key">官方 API Key 指引 ↗</a> · <a href="https://help.aliyun.com/zh/model-studio/obtain-the-app-id-and-workspace-id">官方空间 ID 图示 ↗</a></details>
+<details><summary>检查失败 / 提示余额或权限问题</summary><p>确认地域为北京，Key 有权使用该业务空间和千问 Character。按窗口提示检查网络、额度或模型权限。聊天检查通过不代表所有声音服务都已获授权。</p><a href="https://help.aliyun.com/zh/model-studio/bill-query-and-cost-management">官方账单、额度与充值说明 ↗</a></details>
+<details><summary>进入下一步后，还要下载什么？</summary><p>第一次安装需要准备本地组件。选择随安装包收到的 AICompanion-Components ZIP 即可校验安装，无需自行解压；准备一次后不必每次重复。已经准备好组件时，会直接继续启动人物。</p></details>
+</section>
+<p class="foot">本页随安装包离线提供，没有脚本、追踪或剪贴板读取，不含你的账号、Key、业务空间地址或人物资料。<br>截图整理日期：2026-10-07。官方页面可能更新，以官方说明为准。</p>
+</main></body></html>

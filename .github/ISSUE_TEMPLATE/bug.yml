@@ -1,0 +1,26 @@
+name: Bug report / 问题反馈
+description: Report installation, voice, animation or display problems.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: "请勿上传 API Key、私人对话或资料库。截图请先涂掉个人信息。 Do not post API keys, private conversations or databases. Redact screenshots."
+  - type: input
+    id: version
+    attributes:
+      label: App version / 程序版本
+      placeholder: "0.1.14"
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: Windows, GPU and RAM / 系统、显卡与内存
+      placeholder: "Windows 11, RTX 3060 12 GB, 32 GB RAM"
+  - type: textarea
+    id: steps
+    attributes:
+      label: What happened and how to reproduce / 发生了什么，如何重现
+      description: "Include the expected result and error message. 可以附已打码的截图。"
+    validations:
+      required: true
