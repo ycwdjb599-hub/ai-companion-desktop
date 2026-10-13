@@ -47,7 +47,7 @@ Cloud services handle conversation and speech synthesis; your PC handles recogni
 <summary>How input, conversation, memory and motion connect</summary>
 
 ```mermaid
-flowchart LR
+flowchart TD
   Text["Text input"]
   Mic["Microphone"]
   ASR["Local recognition"]

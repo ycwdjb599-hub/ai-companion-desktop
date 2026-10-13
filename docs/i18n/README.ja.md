@@ -34,20 +34,20 @@ Windows のデスクトップに暮らす AI の話し相手。文字や声で�
 
 | モジュール | 現在の技術 | 役割 |
 | --- | --- | --- |
-| Desktop Host | **C# · .NET 10 · WinForms** | Windows UI と会話処理の統括 |
-| Avatar | **Unity · UniVRM** | 透明デスクトップアバター、VRM、表情とアニメーション |
-| Conversation | **Qwen Character API** | 自分の API キーを使う推奨対話サービス |
-| Speech recognition | **SenseVoiceSmall INT8 · sherpa-onnx · Silero VAD** | ローカル音声認識と発話検出 |
-| Speech synthesis | **Qwen TTS API** | クラウド音声合成。ローカル音声モデルは任意 |
-| Memory | **SQLite · Qwen3 Embedding 0.6B** | 会話・状態の保存とローカル履歴の意味検索 |
-| Speech motion | **StreamTalk · WavLM · Fixed Body** | 任意の音声駆動モーションとアバター骨格への適用 |
-| Distribution | **Velopack · GitHub Releases · SHA-256** | インストール、リソース再開、整合性確認とバージョン配布 |
+| デスクトップ UI | **C# · .NET 10 · WinForms** | Windows UI と会話処理の統括 |
+| アバター表示 | **Unity · UniVRM** | 透明デスクトップアバター、VRM、表情とアニメーション |
+| AI 対話 | **Qwen Character API** | 自分の API キーを使う推奨対話サービス |
+| 音声認識 | **SenseVoiceSmall INT8 · sherpa-onnx · Silero VAD** | ローカル音声認識と発話検出 |
+| 音声合成 | **Qwen TTS API** | クラウド音声合成。ローカル音声モデルは任意 |
+| ローカル記憶 | **SQLite · Qwen3 Embedding 0.6B** | 会話・状態の保存とローカル履歴の意味検索 |
+| 発話モーション | **StreamTalk · WavLM · Fixed Body** | 任意の音声駆動モーションとアバター骨格への適用 |
+| インストール・配布 | **Velopack · GitHub Releases · SHA-256** | インストール、リソース再開、整合性確認とバージョン配布 |
 
 <details>
 <summary>入力・対話・記憶・モーションのつながり</summary>
 
 ```mermaid
-flowchart LR
+flowchart TD
   Text["文字入力"]
   Mic["マイク"]
   ASR["ローカル認識"]

@@ -34,20 +34,20 @@
 
 | 模組 | 目前技術 | 用途 |
 | --- | --- | --- |
-| Desktop Host | **C# · .NET 10 · WinForms** | Windows 介面與會話編排 |
-| Avatar | **Unity · UniVRM** | 透明桌面角色、VRM、表情與動畫 |
-| Conversation | **Qwen Character API** | 推薦的對話服務；使用自己的 API Key |
-| Speech recognition | **SenseVoiceSmall INT8 · sherpa-onnx · Silero VAD** | 本機語音辨識與說話偵測 |
-| Speech synthesis | **Qwen TTS API** | 雲端配音；本機聲音模型為選用項目 |
-| Memory | **SQLite · Qwen3 Embedding 0.6B** | 聊天與狀態保存、本機歷史語義檢索 |
-| Speech motion | **StreamTalk · WavLM · Fixed Body** | 選用的語音驅動動作與角色骨架適配 |
-| Distribution | **Velopack · GitHub Releases · SHA-256** | 安裝、資源續傳、完整性檢查與版本分發 |
+| 桌面介面 | **C# · .NET 10 · WinForms** | Windows 介面與會話編排 |
+| 角色渲染 | **Unity · UniVRM** | 透明桌面角色、VRM、表情與動畫 |
+| AI 對話 | **Qwen Character API** | 推薦的對話服務；使用自己的 API Key |
+| 語音辨識 | **SenseVoiceSmall INT8 · sherpa-onnx · Silero VAD** | 本機語音辨識與說話偵測 |
+| 聲音生成 | **Qwen TTS API** | 雲端配音；本機聲音模型為選用項目 |
+| 本機記憶 | **SQLite · Qwen3 Embedding 0.6B** | 聊天與狀態保存、本機歷史語義檢索 |
+| 說話動作 | **StreamTalk · WavLM · Fixed Body** | 選用的語音驅動動作與角色骨架適配 |
+| 安裝分發 | **Velopack · GitHub Releases · SHA-256** | 安裝、資源續傳、完整性檢查與版本分發 |
 
 <details>
 <summary>查看輸入、對話、記憶與動作如何連接</summary>
 
 ```mermaid
-flowchart LR
+flowchart TD
   Text["文字輸入"]
   Mic["麥克風"]
   ASR["本機辨識"]
