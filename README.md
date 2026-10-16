@@ -10,13 +10,31 @@
 
 一个生活在 Windows 桌面上的 AI 小伙伴。她可以陪你聊今天、听你说话，也会把聊天记录与记忆留在你的电脑里。
 
+## 0.1.16 · 聊天更清楚，联系更自然
+
+- **打字、表情与图片**：统一线条工具栏，发送后立即清空输入框；回复确认完整后一次显示。可更换双方头像，在聊天设置调整聊天字号。
+- **语音通话**：独立通话窗口显示头像、等待接听、计时和挂断。接听或拒接前会有一段长短不同的等待；取消后不会迟到接通。按住说话仍可直接使用。
+- **安静的主动消息**：可在设置中开启。她主动发出的内容只显示文字，不读出来；你未回复时，最多追加一次可选回应，之后暂停，避免反复发送类似分享。
+- **相处从认识开始**：新人物不会刚认识就自动接电话。联系意愿参考实际交流与当前关系；没有好感度数值界面，拒接后仍可继续文字聊天。
+- **延续上次的选择**：首次确认相处模式后保存，重启直接延续；之后在「设置 → 互动与快捷键 → 相处模式 → 应用模式」切换。
+
+选择图片后由配置的视觉服务理解；图片会发送给该服务。普通聊天模型无需跟着切换。
+
+本次基础资源版本不变，已校验可用的资源继续复用。更新详情和验证范围见 [更新记录](docs/CHANGELOG.md)。
+
+<table><tr><td width="72%"><img src="assets/text-chat.png" alt="Text chat" width="780"></td><td width="28%"><img src="assets/voice-call.png" alt="Voice call" width="260"></td></tr></table>
+
+<sub>真实 Windows 界面；聊天内容为测试示例，不是用户私人对话。</sub>
+
+默认外观现为 **16 号阿尔卑斯雏菊裙装**，保留旧 Model 2 文件用于回退。现有重型语音驱动动作组件仍绑定 Model 2；16 号会跳过该下载，基础文字、语音、表情和待机不依赖它。视频媒体与完整麦克风通话本轮未重新验证。
+
 <a name="companion"></a>
 
 ## 让陪伴留在桌面上
 
 <table>
 <tr>
-<td align="center" width="36%"><a href="assets/model02-desktop.png"><img src="assets/model02-desktop.png" alt="Model 2 renderer screenshot" width="240"></a><br><sub>Model 2 · 当前默认人物</sub></td>
+<td align="center" width="36%"><a href="assets/alpine16-avatar.png"><img src="assets/alpine16-avatar.png" alt="Alpine 16 runtime portrait" width="240"></a><br><sub>16 号 · 实际运行模型头像</sub></td>
 <td width="64%">
 <p><strong>桌面陪伴</strong><br>拖动、任务栏与窗口边缘坐姿，待机动作与表情。</p>
 <p><strong>文字与语音</strong><br>文字聊天、按住说话、连续语音；可以用按钮打断回复。</p>
@@ -36,11 +54,11 @@
 | --- | --- | --- |
 | 桌面界面 | **C# · .NET 10 · WinForms** | Windows 界面与会话编排 |
 | 人物渲染 | **Unity · UniVRM** | 透明桌面人物、VRM、表情与动画 |
-| AI 对话 | **Qwen Character API** | 推荐的对话服务；使用自己的 API Key |
+| AI 对话 | **Qwen Character · OpenAI-compatible API** | 推荐的对话服务；使用自己的 API Key |
 | 语音识别 | **SenseVoiceSmall INT8 · sherpa-onnx · Silero VAD** | 本地语音识别与说话检测 |
 | 声音生成 | **Qwen TTS API** | 云端配音；本地声音模型为可选项 |
 | 本地记忆 | **SQLite · Qwen3 Embedding 0.6B** | 聊天与状态保存、本地历史语义检索 |
-| 说话动作 | **StreamTalk · WavLM · Fixed Body** | 可选的语音驱动动作与人物骨架适配 |
+| 说话动作 | **StreamTalk · WavLM · Fixed Body (Model 2)** | 可选的语音驱动动作与人物骨架适配 |
 | 安装分发 | **Velopack · GitHub Releases · SHA-256** | 安装、资源续传、完整性校验与版本分发 |
 
 <details>

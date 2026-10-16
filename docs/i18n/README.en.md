@@ -10,13 +10,31 @@
 
 A companion that lives on your Windows desktop. Talk about your day through text or voice, with chat history and memory stored on your own computer.
 
+## 0.1.16 · Clearer chat, more natural calls
+
+- **Text, stickers and images**: consistent outline controls; sending clears the composer immediately. Completed replies appear together. Change either avatar and adjust text size in chat settings.
+- **A dedicated call screen**: avatar, ringing, duration and hang-up controls. Acceptance and refusal have variable waiting times; cancellation cannot become a late connection. Push-to-talk remains available.
+- **Quiet proactive messages**: opt in through settings. These messages are never read aloud. With no reply, at most one optional follow-up is allowed before sharing pauses.
+- **Get acquainted first**: a new companion does not immediately accept calls. Contact willingness uses actual interaction and the current relationship, without a visible affection score. Text chat remains available after refusal.
+- **Continue where you left off**: the confirmed first-run mode survives restarts. Later changes live in Settings → Interaction & shortcuts → Relationship mode → App mode.
+
+Selected images are sent to the configured vision service for interpretation. The main chat model does not need to change.
+
+The base resource version is unchanged; verified existing resources are reused. See [release history](../CHANGELOG.md) for changes and validation scope.
+
+<table><tr><td width="72%"><img src="../../assets/text-chat.png" alt="Text chat" width="780"></td><td width="28%"><img src="../../assets/voice-call.png" alt="Voice call" width="260"></td></tr></table>
+
+<sub>Actual Windows UI. Chat text is a test fixture, not a private user conversation.</sub>
+
+The bundled default is now **Alpine 16 Daisy**; the previous Model 2 file is retained for fallback. The heavy audio-driven motion component is still bound to Model 2, so Alpine 16 skips that download. Basic text, voice, expressions and idle behavior do not require it. Full microphone calls and video media were not revalidated in this release.
+
 <a name="companion"></a>
 
 ## Company that stays on your desktop
 
 <table>
 <tr>
-<td align="center" width="36%"><a href="../../assets/model02-desktop.png"><img src="../../assets/model02-desktop.png" alt="Model 2 renderer screenshot" width="240"></a><br><sub>Model 2 · Current default avatar</sub></td>
+<td align="center" width="36%"><a href="../../assets/alpine16-avatar.png"><img src="../../assets/alpine16-avatar.png" alt="Alpine 16 runtime portrait" width="240"></a><br><sub>Alpine 16 · Runtime avatar portrait</sub></td>
 <td width="64%">
 <p><strong>Desktop presence</strong><br>Dragging, taskbar and window-edge sitting, idle animations and expressions.</p>
 <p><strong>Text and voice</strong><br>Text chat, push-to-talk and continuous listening; interrupt a reply with a button.</p>
@@ -36,11 +54,11 @@ Cloud services handle conversation and speech synthesis; your PC handles recogni
 | --- | --- | --- |
 | Desktop Host | **C# · .NET 10 · WinForms** | Windows interface and conversation orchestration |
 | Avatar | **Unity · UniVRM** | Transparent desktop avatar, VRM, expressions and animation |
-| Conversation | **Qwen Character API** | Recommended conversation service using your own API key |
+| Conversation | **Qwen Character · OpenAI-compatible API** | Recommended conversation service using your own API key |
 | Speech recognition | **SenseVoiceSmall INT8 · sherpa-onnx · Silero VAD** | Local speech recognition and voice activity detection |
 | Speech synthesis | **Qwen TTS API** | Cloud speech synthesis; local voice models are optional |
 | Memory | **SQLite · Qwen3 Embedding 0.6B** | Chat/state storage and local semantic history retrieval |
-| Speech motion | **StreamTalk · WavLM · Fixed Body** | Optional audio-driven motion and avatar rig adaptation |
+| Speech motion | **StreamTalk · WavLM · Fixed Body (Model 2)** | Optional audio-driven motion and avatar rig adaptation |
 | Distribution | **Velopack · GitHub Releases · SHA-256** | Installation, resumable resources, integrity checks and version distribution |
 
 <details>

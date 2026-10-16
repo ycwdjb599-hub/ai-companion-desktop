@@ -10,13 +10,31 @@
 
 一個住在 Windows 桌面上的 AI 夥伴。陪你聊聊今天、聽你說話，聊天紀錄與記憶留在你的電腦裡。
 
+## 0.1.16 · 聊天更清楚，聯繫更自然
+
+- **文字、表情與圖片**：統一線條工具列，傳送後立即清空輸入框；回覆確認完整後一次顯示。可更換雙方頭像，在聊天設定調整聊天字型大小。
+- **獨立通話畫面**：顯示頭像、等待接聽、通話時間與掛斷。接聽或拒接前有長短不同的等待；取消後不會延遲接通。按住說話仍可直接使用。
+- **安靜的主動訊息**：可在設定中開啟，主動訊息一律不朗讀。未回覆時最多追加一次可選回應，之後暫停，避免一直發送類似分享。
+- **從認識開始相處**：新人物不會剛認識就自動接電話。聯繫意願參考實際交流與當前關係，不顯示好感度分數；拒接後仍可繼續打字。
+- **延續上次選擇**：首次確認相處模式後儲存，重啟直接延續；後續由「設定 → 互動與快捷鍵 → 相處模式 → 應用模式」切換。
+
+選擇的圖片由已設定的視覺服務理解，圖片會傳送至該服務；一般聊天模型不必切換。
+
+基礎資源版本不變，已驗證的資源繼續沿用。變更與驗證範圍見 [更新記錄](../CHANGELOG.md)。
+
+<table><tr><td width="72%"><img src="../../assets/text-chat.png" alt="Text chat" width="780"></td><td width="28%"><img src="../../assets/voice-call.png" alt="Voice call" width="260"></td></tr></table>
+
+<sub>真實 Windows 介面；聊天文字為測試範例，不是使用者的私人對話。</sub>
+
+預設外觀改為 **16 號阿爾卑斯雛菊裙裝**，保留舊 Model 2 檔案以供回復。重型語音驅動動作仍綁定 Model 2；16 號會略過該下載，基本文字、語音、表情與待機不依賴它。本次未重新驗證完整麥克風通話與視訊媒體。
+
 <a name="companion"></a>
 
 ## 讓陪伴留在桌面上
 
 <table>
 <tr>
-<td align="center" width="36%"><a href="../../assets/model02-desktop.png"><img src="../../assets/model02-desktop.png" alt="Model 2 renderer screenshot" width="240"></a><br><sub>Model 2 · 目前預設角色</sub></td>
+<td align="center" width="36%"><a href="../../assets/alpine16-avatar.png"><img src="../../assets/alpine16-avatar.png" alt="Alpine 16 runtime portrait" width="240"></a><br><sub>16 號 · 實際執行模型頭像</sub></td>
 <td width="64%">
 <p><strong>桌面陪伴</strong><br>拖曳、工作列與視窗邊緣坐姿，待機動作與表情。</p>
 <p><strong>文字與語音</strong><br>文字聊天、按住說話、連續語音；可用按鈕中斷回覆。</p>
@@ -36,11 +54,11 @@
 | --- | --- | --- |
 | 桌面介面 | **C# · .NET 10 · WinForms** | Windows 介面與會話編排 |
 | 角色渲染 | **Unity · UniVRM** | 透明桌面角色、VRM、表情與動畫 |
-| AI 對話 | **Qwen Character API** | 推薦的對話服務；使用自己的 API Key |
+| AI 對話 | **Qwen Character · OpenAI-compatible API** | 推薦的對話服務；使用自己的 API Key |
 | 語音辨識 | **SenseVoiceSmall INT8 · sherpa-onnx · Silero VAD** | 本機語音辨識與說話偵測 |
 | 聲音生成 | **Qwen TTS API** | 雲端配音；本機聲音模型為選用項目 |
 | 本機記憶 | **SQLite · Qwen3 Embedding 0.6B** | 聊天與狀態保存、本機歷史語義檢索 |
-| 說話動作 | **StreamTalk · WavLM · Fixed Body** | 選用的語音驅動動作與角色骨架適配 |
+| 說話動作 | **StreamTalk · WavLM · Fixed Body (Model 2)** | 選用的語音驅動動作與角色骨架適配 |
 | 安裝分發 | **Velopack · GitHub Releases · SHA-256** | 安裝、資源續傳、完整性檢查與版本分發 |
 
 <details>

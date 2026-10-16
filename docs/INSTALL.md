@@ -38,3 +38,9 @@ Animation preparation is independent from core chat. Once core resources and you
 To update, exit the app and run the new installer while retaining the existing data/resource locations. API settings, history and memory stay local. The unchanged base component version is reused when already installed. To uninstall, use the app’s uninstall action or Windows Apps settings; personal data and downloaded resources are retained.
 
 The app UI is currently Simplified Chinese. Windows x64 is supported; GPU features require a compatible NVIDIA GPU/driver. If you report a problem, include the app version and a redacted screenshot, not your API key or private chat database.
+
+## 0.1.16 人物与动作
+
+新安装使用 16 号，模型与布料配置一同保存在所选资源盘。已有安装沿用此前保存的人物。旧 Model 2 的回退文件保留在安装包 `assets/fallback/Model2.vrm`。
+
+大型语音驱动动作目前只适配 Model 2。看到 16 号的“不支持，无需下载”提示后，可点击「先开始使用 · 动作稍后补齐」进入基础聊天；这不影响文字、声音或口型。不要反复下载旧组件来尝试修复人物绑定。

@@ -4,8 +4,11 @@
 
 | 内容 / Component | 来源和说明 / Source and terms |
 | --- | --- |
-| 默认蓝发人物 Model 2 | 作者 LINK@；经作者与项目维护者确认的应用分发许可，保留原 VRM 元数据。这不授予使用者额外转售或再分发许可。 |
-| 首页宣传图 | 项目原创生成插图；属于功能宣传图，不代表安装版界面或默认模型外观。旁边的 Model 2 图为实际 Renderer 截图。 |
+| 旧版回退人物 Model 2 | 作者 LINK@；经作者与项目维护者确认的应用分发许可，保留原 VRM 元数据。这不授予使用者额外转售或再分发许可。 |
+| 默认人物 Alpine 16 Daisy | VRM 元数据作者：Original by Peach, Modified by JustAPal。原元数据允许修改及再分发，保留 VRM 1.0 许可和原始署名；不额外授予超出素材条款的权利。 |
+| 彩色表情 | [Microsoft Fluent Emoji](https://github.com/microsoft/fluentui-emoji)，MIT；来源清单与许可随包提供。 |
+| 通话铃声 | f-r-a-g-i-l-e 的 Airy Bells, Ringtone/Riff，CC0；转换与响度处理，完整来源见 [铃声说明](licenses/ringtone-SOURCES.md)。 |
+| 首页宣传图 | 项目原创生成插图；属于功能宣传图，不代表安装版界面或默认模型外观。16 号头像来自运行模型，聊天与通话图来自真实原生窗口，聊天文字为合成测试样例。 |
 | 待机与拖拽动画 | [Mate Engine](https://github.com/shinyflvre/Mate-Engine)。程序向原作者来源下载并本机准备；本仓库不转存受限动画或研发待机包。获取方式不豁免原作者条款。 |
 | SenseVoiceSmall INT8 / Fun-ASR-Nano INT8 | FunASR / Alibaba 及 ONNX 转换项目。模型名称、作者和实际随包许可保留；[FunASR Model License](licenses/FunASR-MODEL-LICENSE.txt)。默认选 SenseVoice，Nano 为可选项。 |
 | 本机记忆检索 | [Qwen3 Embedding](https://huggingface.co/Qwen/Qwen3-Embedding-0.6B)，保留其模型卡与 Apache-2.0 许可。 |

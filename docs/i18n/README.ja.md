@@ -10,13 +10,31 @@
 
 Windows のデスクトップに暮らす AI の話し相手。文字や声で今日のことを話せます。会話履歴と記憶は自分の PC に保存されます。
 
+## 0.1.16 · 読みやすいチャット、自然な通話
+
+- **文字・スタンプ・画像**：線画アイコンを統一。送信後は入力欄をすぐに空にし、完成した返信をまとめて表示します。双方のアイコンを変更でき、文字の大きさはチャット設定で調整できます。
+- **専用の通話画面**：アイコン、呼び出し、経過時間、終了ボタンを表示。応答・拒否の前に長さの異なる待ち時間があり、キャンセルした通話が後から接続されることはありません。押して話す機能は引き続き利用できます。
+- **静かな自発メッセージ**：設定で有効化できます。自発メッセージは読み上げません。未返信なら追加の反応は任意で最大1回、その後は送信を休止します。
+- **知り合うところから**：初対面ではすぐに通話に応答しません。実際の交流と現在の関係を参照し、好感度の数値は表示しません。拒否後も文字で会話できます。
+- **前回の選択を保存**：初回に確定したモードは再起動後も維持します。変更は設定 → インタラクションとショートカット → 関係モード → アプリモードから行います。
+
+選択した画像は設定済みの画像認識サービスに送信されます。メインの会話モデルを切り替える必要はありません。
+
+基本リソースのバージョンは変更せず、検証済みの既存データを再利用します。変更と検証範囲は [更新履歴](../CHANGELOG.md) を参照してください。
+
+<table><tr><td width="72%"><img src="../../assets/text-chat.png" alt="Text chat" width="780"></td><td width="28%"><img src="../../assets/voice-call.png" alt="Voice call" width="260"></td></tr></table>
+
+<sub>実際の Windows UI。会話文はテスト用で、利用者の私的な会話ではありません。</sub>
+
+既定アバターは **Alpine 16 Daisy** になりました。旧 Model 2 のファイルも復帰用に保持します。大容量の音声駆動モーションはまだ Model 2 専用のため、Alpine 16 ではダウンロードを省略します。基本の文字・音声・表情・待機には不要です。マイク通話全体とビデオメディアは今回再検証していません。
+
 <a name="companion"></a>
 
 ## デスクトップで、そばにいる
 
 <table>
 <tr>
-<td align="center" width="36%"><a href="../../assets/model02-desktop.png"><img src="../../assets/model02-desktop.png" alt="Model 2 renderer screenshot" width="240"></a><br><sub>Model 2 · 現在の既定アバター</sub></td>
+<td align="center" width="36%"><a href="../../assets/alpine16-avatar.png"><img src="../../assets/alpine16-avatar.png" alt="Alpine 16 runtime portrait" width="240"></a><br><sub>Alpine 16 · 実行モデルのポートレート</sub></td>
 <td width="64%">
 <p><strong>デスクトップの存在感</strong><br>ドラッグ、タスクバーやウィンドウ端の座り姿勢、待機モーションと表情。</p>
 <p><strong>文字と音声</strong><br>文字チャット、押して話す、連続音声。ボタンで応答を中断できます。</p>
@@ -36,11 +54,11 @@ Windows のデスクトップに暮らす AI の話し相手。文字や声で�
 | --- | --- | --- |
 | デスクトップ UI | **C# · .NET 10 · WinForms** | Windows UI と会話処理の統括 |
 | アバター表示 | **Unity · UniVRM** | 透明デスクトップアバター、VRM、表情とアニメーション |
-| AI 対話 | **Qwen Character API** | 自分の API キーを使う推奨対話サービス |
+| AI 対話 | **Qwen Character · OpenAI-compatible API** | 自分の API キーを使う推奨対話サービス |
 | 音声認識 | **SenseVoiceSmall INT8 · sherpa-onnx · Silero VAD** | ローカル音声認識と発話検出 |
 | 音声合成 | **Qwen TTS API** | クラウド音声合成。ローカル音声モデルは任意 |
 | ローカル記憶 | **SQLite · Qwen3 Embedding 0.6B** | 会話・状態の保存とローカル履歴の意味検索 |
-| 発話モーション | **StreamTalk · WavLM · Fixed Body** | 任意の音声駆動モーションとアバター骨格への適用 |
+| 発話モーション | **StreamTalk · WavLM · Fixed Body (Model 2)** | 任意の音声駆動モーションとアバター骨格への適用 |
 | インストール・配布 | **Velopack · GitHub Releases · SHA-256** | インストール、リソース再開、整合性確認とバージョン配布 |
 
 <details>
