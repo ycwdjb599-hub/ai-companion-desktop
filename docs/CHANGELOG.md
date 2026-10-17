@@ -1,5 +1,31 @@
 # 更新记录 / Release history
 
+## 0.1.17 · 2026-10-17
+
+[下载与完整版本资产](https://github.com/ycwdjb599-hub/ai-companion-desktop/releases/tag/v0.1.17)
+
+- 可选语音驱动动作已适配当前 Alpine 16：使用实机导出的骨架与手掌绑定，保留坐姿腿部和单一姿态写入；减少瞬间突变，收尾至少 2.2 秒。
+- 语音和视频拒接前等待一段不固定的时间。本地关系规则拒接后留下简短、静音的文字解释；取消不会产生迟到的拒接解释。
+- 修复通话右上角按钮按下时出现的白色背景。
+- 保留现有聊天模型、关系、聊天和设置。公共包不包含开发者聊天、记忆、API 凭据或受限本地动画。
+
+### 实际验证与使用说明
+
+16 号实际渲染器完成站姿、坐姿、取消和收尾检查；实际 Windows 音频输出驱动连续两次回复。测试机 RTX 5070 Ti Laptop 上渲染约 30 FPS，2 秒音频窗口的动作推理约 103–120 ms。首次动作模型冷加载约 46 秒，后续复用进程；这不是所有设备的性能保证。
+
+实际候选语音／视频拒接等待分别约 9.3／6.6 秒，之后显示解释并回到聊天。未重跑真人麦克风完整通话、完整视频媒体、所有设备和长时间压力测试；动作观感仍可继续反馈。
+
+新安装默认 16 号；旧 Model 2 文件保留回退。基础资源版本不变，16 号动作组件使用独立目录，可能仍需首次下载较大的本地运行资源。也可以先使用基础聊天、声音与口型。
+
+更新前退出旧版，运行安装程序并保留原资料／资源位置。旧版 Releases 保留；回退程序不要删除或回滚私人聊天资料。安装包仍未做商业代码签名，请核对 SHA256SUMS.txt。
+
+### English
+
+Optional audio-driven motion now supports the bundled Alpine 16, with target-specific skeleton/palm binding, seated-leg preservation, bounded rotation changes and a smooth return of at least 2.2 seconds. Voice/video refusals wait before ending and local relationship gates leave a short silent explanation. Fixed the upper-right call-control white background.
+
+Verified with the actual renderer and two consecutive prerecorded synthetic-audio replies. On the test RTX 5070 Ti Laptop: about 30 FPS, 103–120 ms motion inference per 2-second audio window, and about 46 seconds for the first cold worker load. Full human-microphone calls, complete video media and long-duration soak tests were not repeated. No main chat model change, private data, credentials or restricted local animation bundles are included.
+
+
 ## 0.1.16 · 2026-10-17
 
 [下载 Windows 安装程序](https://github.com/ycwdjb599-hub/ai-companion-desktop/releases/download/v0.1.16/AICompanionTrial-win-Setup.exe) · [完整版本资产](https://github.com/ycwdjb599-hub/ai-companion-desktop/releases/tag/v0.1.16)
