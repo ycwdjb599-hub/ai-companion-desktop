@@ -10,10 +10,7 @@
 
 A companion that lives on your Windows desktop. Talk about your day through text or voice, with chat history and memory stored on your own computer.
 
-## 0.1.17 · Alpine 16 speech motion and call fixes
-
-- **Speech motion for Alpine 16**: rebinds the current skeleton and palms, preserves seated legs, smooths sudden changes and blends back from the actual pose.
-- **A response after refusal**: voice and video wait for a variable ringing period. Local relationship refusals leave a short, silent text explanation. Fixed the white background on upper-right call controls.
+## 0.1.16 · Clearer chat, more natural calls
 
 - **Text, stickers and images**: consistent outline controls; sending clears the composer immediately. Completed replies appear together. Change either avatar and adjust text size in chat settings.
 - **A dedicated call screen**: avatar, ringing, duration and hang-up controls. Acceptance and refusal have variable waiting times; cancellation cannot become a late connection. Push-to-talk remains available.
@@ -29,7 +26,7 @@ The base resource version is unchanged; verified existing resources are reused. 
 
 <sub>Actual Windows UI. Chat text is a test fixture, not a private user conversation.</sub>
 
-The default is **Alpine 16 Daisy**, with Model 2 retained for fallback. Optional audio-driven motion now supports this exact Alpine 16 build; basic chat works independently. Cold model loading took about 46 seconds on the test PC, with the worker reused afterward; other devices may differ. Actual audio playback, standing/seated motion and refusal flows were checked. Full human-microphone calls and video media were not revalidated.
+The bundled default is now **Alpine 16 Daisy**; the previous Model 2 file is retained for fallback. The heavy audio-driven motion component is still bound to Model 2, so Alpine 16 skips that download. Basic text, voice, expressions and idle behavior do not require it. Full microphone calls and video media were not revalidated in this release.
 
 <a name="companion"></a>
 
@@ -61,7 +58,7 @@ Cloud services handle conversation and speech synthesis; your PC handles recogni
 | Speech recognition | **SenseVoiceSmall INT8 · sherpa-onnx · Silero VAD** | Local speech recognition and voice activity detection |
 | Speech synthesis | **Qwen TTS API** | Cloud speech synthesis; local voice models are optional |
 | Memory | **SQLite · Qwen3 Embedding 0.6B** | Chat/state storage and local semantic history retrieval |
-| Speech motion | **StreamTalk · WavLM · Fixed Body → Alpine 16** | Optional audio-driven motion and avatar rig adaptation |
+| Speech motion | **StreamTalk · WavLM · Fixed Body (Model 2)** | Optional audio-driven motion and avatar rig adaptation |
 | Distribution | **Velopack · GitHub Releases · SHA-256** | Installation, resumable resources, integrity checks and version distribution |
 
 <details>
